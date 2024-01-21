@@ -1,0 +1,8 @@
+.direnv
+
+# LaTeX
+*.log
+main.*
+.latexrun*
+!main.tex
+

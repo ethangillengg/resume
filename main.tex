@@ -4,7 +4,6 @@
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -35,7 +34,6 @@
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
-
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -70,7 +68,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
+	\vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -79,37 +77,37 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
 }
 
 \newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
+	\item\small{
+		{#1 #2 #3 #4 \vspace{-2pt}}
+	}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+	\vspace{-2pt}\item
+	\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textbf{\small #2} \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+	\item
+	\begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & \textbf{\small #2}\\
+	\end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -118,9 +116,15 @@
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+		\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+		\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand{\Cpp}{C\texttt{++}}
+\newcommand{\Csharp}{C\texttt{\#}}
+
+
 
 % Define colors
 \definecolor{accent}{RGB}{255,215,0}
@@ -128,21 +132,21 @@
 
 % Define the skill command using tabularx to space out elements
 \newcommand{\cvskill}[2]{%
-  \noindent
-  \begin{tabularx}{140pt}{@{}Xr@{}}
-    \textbf{#1} & \skillstars{#2} \\
-  \end{tabularx}%
+	\noindent
+	\begin{tabularx}{140pt}{@{}Xr@{}}
+		\textbf{#1} & \skillstars{#2} \\
+	\end{tabularx}%
 }
 
 % Define command for producing stars based on skill value
 \newcommand{\skillstars}[1]{%
-  \foreach \x in {1,...,5}{%
-    \ifnum #1<\x
-      {\color{body}\faStar}% Empty stars from the skill level to 5
-    \else
-      {\color{accent}\faStar}% Filled stars up to the skill
-    \fi
-  }%
+	\foreach \x in {1,...,5}{%
+			\ifnum #1<\x
+				{\color{body}\faStar}% Empty stars from the skill level to 5
+			\else
+				{\color{accent}\faStar}% Filled stars up to the skill
+			\fi
+		}%
 }
 
 %-------------------------------------------
@@ -151,34 +155,40 @@
 
 %----------HEADING----------
 \begin{center}
-    {\Huge \scshape Ethan Gill} \\ \vspace{4pt}
-    \small \raisebox{-0.1\height}\faPhone\ (587) 703-7642 ~ 
-    \href{mailto:ethan.gill@ucalgary.ca}{\raisebox{-0.2\height}\faEnvelope\  \underline{ethan.gill@ucalgary.ca}} ~ 
-    \href{https://www.linkedin.com/in/ethan-gill-008a00258/}{\raisebox{-0.2\height}\faLinkedin\ \underline{Ethan Gill}}  ~
-    \href{https://github.com/ethangillengg}{\raisebox{-0.2\height}\faGithub\ \underline{ethangillengg}}
-    \vspace{-4pt}
+	{\Huge \scshape Ethan Gill} \\ \vspace{4pt}
+	\small \raisebox{-0.1\height}\faPhone\ (587) 703-7642 ~
+	\href{mailto:ethan.gill@ucalgary.ca}{
+		\raisebox{-0.2\height}\faEnvelope\  \underline{ethan.gill@ucalgary.ca}
+	} ~
+	\href{https://www.linkedin.com/in/ethan-gill-008a00258/}{
+		\raisebox{-0.2\height}\faLinkedin\ \underline{Ethan Gill}
+	} ~
+	\href{https://github.com/ethangillengg}{
+		\raisebox{-0.2\height}\faGithub\ \underline{ethangillengg}
+	}
+	\vspace{-4pt}
 \end{center}
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}, parsep=2pt]
-    \resumeItem{\textbf{Languages:} TypeScript, C\#, Python, C++, Rust, Nix, Lua}
-    \resumeItem{\textbf{Frameworks:} .NET, Node, React, Vue.js, Next.js, Django}
-    \resumeItem{\textbf{Tools:} Git, Neovim, LSP, Docker, Nix, CLI}
-    \resumeItem{\textbf{Concepts:} API Design, State Management, Performance Optimization}
-    \item{\textbf{Operating Systems:} Linux, Windows}
+	\resumeItem{\textbf{Languages:} TypeScript, \Csharp, Python, \Cpp, Bash, Rust, Nix, Lua}
+	\resumeItem{\textbf{Frameworks:} .NET, Node, React, Vue.js, Next.js, Django}
+	\resumeItem{\textbf{Tools:} Git CLI, Neovim, LSP, Docker, CMake, Nix, VSCode}
+	\resumeItem{\textbf{Concepts:} API Design, State Management, Performance Optimization}
+	\item{\textbf{Operating Systems:} Linux, Windows}
 \end{itemize}
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Calgary}{Sep. 2019 -- April 2024}
-      {BSc. Software Engineering}{Calgary, Alberta}
-        \resumeItemListStart
-            \resumeItem{Key Coursework: Data Structures and Algorithms, Operating Systems, Web Development, Database Management}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Calgary}{Sep. 2019 -- April 2024}
+{BSc. Software Engineering}{Calgary, Alberta}
+\resumeItemListStart
+\resumeItem{Key Coursework: Data Structures and Algorithms, Operating Systems, Web Development, Database Management}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 \vspace{-12pt}
 
 
@@ -186,84 +196,80 @@
 \section{Experience}
 \resumeSubHeadingListStart
 \resumeSubheading
-  {Sunwapta Solutions}{September 2022 -- Present}
-  {Full Stack Developer}{Calgary, Alberta}
-    \resumeItemListStart
-        \resumeItem{Worked with \textbf{Vue} and \textbf{.NET} to create and design solutions to client's unique business problems.}
-        \resumeItem{Worked on \textbf{production code} used by \textbf{hundreds of thousands} of users in the grocery retail industry.}
-        \resumeItem{Integrated various \textbf{business APIs} together to create a cohesive product.}
-        \resumeItem{Collaborated and integrated with \textbf{external and internal} teams.}
-    \resumeItemListEnd
-  
+{Sunwapta Solutions}{September 2022 -- Present}
+{Full Stack Developer}{Calgary, Alberta}
+\resumeItemListStart
+\resumeItem{Worked with \textbf{Vue} and \textbf{.NET} to create and design solutions to client's unique business problems.}
+\resumeItem{Worked on \textbf{production code} used by \textbf{hundreds of thousands} of users in the grocery retail industry.}
+\resumeItem{Integrated various \textbf{business APIs} together to create a cohesive product.}
+\resumeItem{Collaborated and integrated with \textbf{external and internal} teams.}
+\resumeItemListEnd
+
 \resumeSubheading
-      {PulseMedica}{May 2022 -- September 2022}
-      {Full Stack Developer Intern}{Edmonton, Alberta}
-    \resumeItemListStart
-        \resumeItem{Worked with \textbf{React} and \textbf{TypeScript} to design and implement a frontend medical application used by opthamologists for surgical planning.}
-        \resumeItem{Gained experience with developer processes (\textbf{AGILE}) and proper \textbf{git} procedures.}
-        \resumeItem{Peformed automated frontend testing using the \textbf{Vitest} framework.}
-        \resumeItem{Collaborated and integrated with other teams (ML, electronics).}
-    \resumeItemListEnd
+{PulseMedica}{May 2022 -- September 2022}
+{Full Stack Developer Intern}{Edmonton, Alberta}
+\resumeItemListStart
+\resumeItem{Worked with \textbf{React} and \textbf{TypeScript} to design and implement a frontend medical application used by opthamologists for surgical planning.}
+\resumeItem{Gained experience with developer processes (AGILE) and \textbf{git} branching techniques.}
+\resumeItem{Peformed automated frontend testing using the \textbf{Vitest} framework.}
+\resumeItem{Collaborated and integrated with other teams (ML, electronics).}
+\resumeItemListEnd
 \resumeSubHeadingListEnd
 \vspace{-12pt}
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-        \resumeProjectHeading
-            {\textbf{Heart Imaging Visualization} $|$ \emph{React, Python, Django}}{Fall 2023 - Winter 2024}
-            \resumeItemListStart
-            \resumeItem{Built a web application to visualize data from heart scans for the engineering capstone project.}
-            \resumeItem{Optimized the heart scan parser, and \textbf{docker} build resulting in \textbf{12x} and \textbf{40x} speedups respectively.}
-            \resumeItem{Collaborated with team members to improve \textbf{code quality} and minimize \textbf{technical debt}.}
-            \resumeItemListEnd 
-          \vspace{-13pt}
-          \resumeProjectHeading
-          {\textbf{Solar Orrery} $|$ \emph{C++, Vulkan}}{Fall 2023}
-          \resumeItemListStart
-            \resumeItem{Designed and implemented a \textbf{3D model} of the sun, earth and moon using the \textbf{C++ Vulkan} API.}
-            \resumeItem{Used \textbf{linear algebra} and concepts from \textbf{computer graphics} to implement \textbf{ray-tracing}.}
-            \resumeItem{Added \textbf{shadow casting} and axial/orbital tilt angles to celestial bodies (earth, moon).}
-          \resumeItemListEnd 
-          \vspace{-13pt}
-          \resumeProjectHeading
-          {\textbf{\href{https://github.com/ethangillengg/worm-rs}{Worm-rs}} $|$ \emph{Rust, CLI}}{Fall 2023}
-          \resumeItemListStart
-            \resumeItem{Built a \textbf{Rust} implementation of the classic worm game for the console.}
-            \resumeItem{Learned the fundamentals of \textbf{Rust}, the \textbf{borrow checker}, and \textbf{state management}.}
-            \resumeItem{Experimented with \textbf{algorithms} for generating a random number of \textbf{n} positions in a 2D space.}
-          \resumeItemListEnd 
-    \resumeSubHeadingListEnd
+\vspace{-5pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Heart Imaging Visualization} $|$ \emph{React, Python, Django}}{Fall 2023 - Winter 2024}
+\resumeItemListStart
+\resumeItem{Built a web application to visualize data from heart scans for the engineering capstone project.}
+\resumeItem{Optimized the heart scan parser, and \textbf{docker} build resulting in \textbf{12x} and \textbf{40x} speedups respectively.}
+\resumeItem{Collaborated with team members to improve \textbf{code quality} and minimize \textbf{technical debt}.}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumeProjectHeading
+{\textbf{Solar Orrery} $|$ \emph{\Cpp, Vulkan}}{Fall 2023}
+\resumeItemListStart
+\resumeItem{Designed and implemented a \textbf{3D model} of the sun, earth and moon using the \textbf{C++ Vulkan} API.}
+\resumeItem{Used \textbf{linear algebra} and concepts from \textbf{computer graphics} to implement \textbf{ray-tracing}.}
+\resumeItem{Added \textbf{shadow casting} and axial/orbital tilt angles to celestial bodies (earth, moon).}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumeProjectHeading
+{\textbf{\href{https://github.com/ethangillengg/worm-rs}{Worm-rs}} $|$ \emph{Rust, CLI}}{Fall 2023}
+\resumeItemListStart
+\resumeItem{Built a \textbf{Rust} implementation of the classic worm game for the console.}
+\resumeItem{Learned the fundamentals of \textbf{Rust}, the \textbf{borrow checker}, and \textbf{state management}.}
+\resumeItem{Experimented with \textbf{algorithms} for generating a random number of \textbf{n} positions in a 2D space.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 \vspace{-12pt}
-
-
-
-
 
 % %-----------Languages-----------
 \section{Languages}
 \begin{multicols}{2}
-    \begin{itemize}[itemsep=0pt, parsep=2pt, label={}, leftmargin=*] % Adjust itemsep and parsep as needed
-        \item \cvskill{TypeScript}{5}
-        \item \cvskill{C\#}{3}
-        \item \cvskill{C++}{3}
-        \item \cvskill{Lua}{3}
-        \item \cvskill{Nix}{3}
-        \item \cvskill{Rust}{2}
-    \end{itemize}
+	\begin{itemize}[itemsep=0pt, parsep=2pt, label={}, leftmargin=*] % Adjust itemsep and parsep as needed
+		\item \cvskill{TypeScript}{5}
+		\item \cvskill{\Csharp}{3}
+		\item \cvskill{\Cpp}{3}
+		\item \cvskill{Bash}{3}
+		\item \cvskill{Lua}{3}
+		\item \cvskill{Rust}{2}
+	\end{itemize}
 \end{multicols}
-\vspace{-4pt}
+\vspace{0pt}
 
 %-----------Hobbies---------------
 \section{Hobbies}
 \begin{itemize}[leftmargin=0.15in, label={}, parsep=2pt]
-    \resumeItem{\textbf{Linux Dotfiles:}
-        {I love to tinker and tweak with my Linux setup for my personal machines.}
-    }
-    \resumeItem{\textbf{Language Learning:}
-        {You can often catch me reading Japanese novels on my e-book during weekends.}
-    }
+	\resumeItem{\textbf{Linux Dotfiles:}
+		{I love to tinker and tweak with my Linux setup for my personal machines.}
+	}
+	\resumeItem{\textbf{Language Learning:}
+		{You can often catch me reading Japanese novels on my e-book during weekends.}
+	}
 \end{itemize}
-        
+
 \end{document}

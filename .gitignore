@@ -2,7 +2,7 @@
 
 # LaTeX
 *.log
-main.*
+resume.*
 .latexrun*
-!main.tex
+!resume.tex
 

@@ -59,12 +59,12 @@
           install -Dm444 -t $out ${pname}.pdf
         '';
       };
-    in {
+    in rec {
       packages.${pname} = pkgs.stdenv.mkDerivation {
         inherit watcher buildLatex name;
       };
+      # defaultPackage = packages.${pname};
 
-      # defaultPackage = packages.virtual-orrery;
       devShell = pkgs.mkShell {
         nativeBuildInputs = [pkgs.bashInteractive];
         buildInputs = with pkgs; [

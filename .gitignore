@@ -1,8 +1,5 @@
 .direnv
 
-# LaTeX
-*.log
-resume.*
-.latexrun*
-!resume.tex
+# tectonic
+build
 

@@ -13,64 +13,17 @@
         system = "x86_64-linux"; # or something else
         config = {allowUnfree = true;};
       };
-      pname = "resume";
-      name = pname;
 
       watcher = pkgs.writeScriptBin "watch" ''
-        out=".latexmkout"
-        mkdir "$out"
-        latexmk \
-          -pvc \
-          -outdir="$out" \
-          -pdf \
-          -pdflatex="pdflatex -interaction=nonstopmode" \
-          -use-make ${pname}.tex
-        rm -r "$out"
+        tectonic -X watch -x "build --open"
       '';
-
-      buildLatex = pkgs.stdenv.mkDerivation {
-        inherit pname;
-
-        src = ./.;
-
-        nativeBuildInputs = with pkgs; [
-          (texlive.combine {
-            inherit
-              (texlive)
-              scheme-medium
-              multirow
-              hyperref
-              blindtext
-              fancyhdr
-              etoolbox
-              topiclongtable
-              ;
-          })
-          gnumake
-        ];
-
-        buildPhase = ''
-          latexmk \
-          -pdf \
-          -pdflatex="pdflatex -interaction=nonstopmode" \
-          -use-make ${pname}.tex
-        '';
-        installPhase = ''
-          install -Dm444 -t $out ${pname}.pdf
-        '';
-      };
-    in rec {
-      packages.${pname} = pkgs.stdenv.mkDerivation {
-        inherit watcher buildLatex name;
-      };
-      # defaultPackage = packages.${pname};
-
+    in {
       devShell = pkgs.mkShell {
         nativeBuildInputs = [pkgs.bashInteractive];
         buildInputs = with pkgs; [
           rubber
           texlab
-          texliveFull
+          tectonic
         ];
       };
 

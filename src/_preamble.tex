@@ -4,7 +4,7 @@
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -13,21 +13,44 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage{fontspec}
 
 \usepackage{tikz} % For \foreach loop
 \usepackage{xcolor} % For \textcolor
 \usepackage{accsupp} % For BeginAccSupp and EndAccSupp
 \usepackage{graphicx} % For \clipbox
 
-% Define colors
-\definecolor{accent}{RGB}{150,150,150}
-\definecolor{body}{RGB}{0,0,0}
+%% Base-16 color theme (https://tinted-theming.github.io/base16-gallery/)
+\definecolor{base00}{HTML}{202020}
+\definecolor{base01}{HTML}{2a2827}
+\definecolor{base02}{HTML}{504945}
+\definecolor{base03}{HTML}{5a524c}
+\definecolor{base04}{HTML}{bdae93}
+\definecolor{base05}{HTML}{ddc7a1}
+\definecolor{base06}{HTML}{ebdbb2}
+\definecolor{base07}{HTML}{fbf1c7}
+\definecolor{base08}{HTML}{ea6962}
+\definecolor{base09}{HTML}{e78a4e}
+\definecolor{base0A}{HTML}{d8a657}
+\definecolor{base0B}{HTML}{a9b665}
+\definecolor{base0C}{HTML}{89b482}
+\definecolor{base0D}{HTML}{7daea3}
+\definecolor{base0E}{HTML}{d3869b}
+\definecolor{base0F}{HTML}{bd6f3e}
+
+% Define fonts & colors
+\setmainfont{JetBrainsMono Nerd Font}
+\pagecolor{base01} % background
+\color{base06}     % text/bullets
+% change bold color
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{base07}{\oldtextbf{#1}}}
 
 % Define symbol marker (e.g. using fontawesome package)
 \newcommand{\cvRatingMarker}{\faStar} % Replace this with your symbol
@@ -58,7 +81,7 @@
 % Sections formatting
 \titleformat{\section}{
 	\vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{base06}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 % \pdfgentounicode=1
@@ -115,10 +138,6 @@
 
 
 
-% Define colors
-\definecolor{accent}{RGB}{255,215,0}
-\definecolor{body}{RGB}{192,192,192}
-
 % Define the skill command using tabularx to space out elements
 \newcommand{\cvskill}[2]{%
 	\noindent
@@ -131,9 +150,9 @@
 \newcommand{\skillstars}[1]{%
 	\foreach \x in {1,...,5}{%
 			\ifnum #1<\x
-				{\color{body}\faStar}% Empty stars from the skill level to 5
+				{\color{base03}\faStar}% Empty stars from the skill level to 5
 			\else
-				{\color{accent}\faStar}% Filled stars up to the skill
+				{\color{base0A}\faStar}% Filled stars up to the skill
 			\fi
 		}%
 }

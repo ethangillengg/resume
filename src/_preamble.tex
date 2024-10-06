@@ -13,7 +13,6 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[colorlinks=true]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -44,13 +43,18 @@
 \definecolor{base0E}{HTML}{d3869b}
 \definecolor{base0F}{HTML}{bd6f3e}
 
+
 % Define fonts & colors
 \setmainfont{JetBrainsMono Nerd Font}
-\pagecolor{base01} % background
-\color{base06}     % text/bullets
+\pagecolor{base00} % background
+\color{base05}     % text/bullets
 % change bold color
 \let\oldtextbf\textbf
-\renewcommand{\textbf}[1]{\textcolor{base07}{\oldtextbf{#1}}}
+\renewcommand{\textbf}[1]{\textcolor{base06}{\oldtextbf{#1}}}
+% change italic color
+\let\oldtextit\textit
+\renewcommand{\textit}[1]{\textcolor{base06}{\oldtextit{#1}}}
+\usepackage[colorlinks=true,  urlcolor=base0D]{hyperref}
 
 % Define symbol marker (e.g. using fontawesome package)
 \newcommand{\cvRatingMarker}{\faStar} % Replace this with your symbol
@@ -81,7 +85,7 @@
 % Sections formatting
 \titleformat{\section}{
 	\vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{base06}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{base03}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 % \pdfgentounicode=1
@@ -150,7 +154,7 @@
 \newcommand{\skillstars}[1]{%
 	\foreach \x in {1,...,5}{%
 			\ifnum #1<\x
-				{\color{base03}\faStar}% Empty stars from the skill level to 5
+				{\color{base02}\faStar}% Empty stars from the skill level to 5
 			\else
 				{\color{base0A}\faStar}% Filled stars up to the skill
 			\fi
